@@ -30,3 +30,10 @@ body {
 p {
   @apply leading-8 text-base mb-5;
 }
+
+.fullscreen {
+  max-width: calc(100vw - 305px);
+}
+
+.image-as-background {
+}

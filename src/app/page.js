@@ -1,6 +1,34 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { Heading } from "@/components/Headings";
+import Gallery  from "@/components/Gallery";
+
+const galleryImages = [
+  <Image
+    src="/aerial.jpg"
+    alt="Hotel Playa Negra Aerial View"
+    width={400}
+    height={232}
+    className="object-cover"
+    key={1}
+    />,
+    <Image
+    src="/DSC_1095.jpg"
+    alt="Hotel Playa Negra Cabin"
+    width={400}
+    height={232}
+    className="object-cover"
+    key={2}
+    />,
+    <Image
+    src="/DSC_1159.jpg"
+    alt="Hotel Playa Negra Sunset"
+    width={400}
+    height={232}
+    className="object-cover"
+    key={3}
+    />
+];
 
 export default function Home() {
   return (
@@ -20,9 +48,22 @@ export default function Home() {
             className="w-1/2 object-cover max-w-1/2 h-[520px]"
             />
         </section>
-        <section id="accommodations" className="mb-10">
-          <h2 className="text-2xl font-semibold">Accommodations</h2>
-          {/* Add accommodations content */}
+        <section className="mb-10">
+          <Gallery galleryImages={ galleryImages } />
+        </section>
+        <section id="accommodations" className="mb-10 relative">
+          <div className="absolute inset-0 fullscreen image-as-background w-screen min-h-[800px]">
+            <Image
+              src="/background-beach.jpg"
+              alt="Hotel Playa Negra Beach"
+              width={400}
+              height={232}
+              className="object-cover w-full -mx-8 h-full z-0"
+              />
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-2xl font-semibold">Accommodations</h2>
+          </div>
         </section>
         <section id="rates" className="mb-10">
           <h2 className="text-2xl font-semibold">Rates</h2>
