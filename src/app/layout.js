@@ -1,6 +1,6 @@
 import { Open_Sans } from 'next/font/google';
 import "./globals.css";
-import Wrapper from '@/components/Wrapper';
+import Container from '@/components/Container';
 
 
 
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={openSans.className}><Wrapper>{children}</Wrapper></body>
+      <body className={openSans.className}><Container>{children}</Container></body>
     </html>
   );
 }

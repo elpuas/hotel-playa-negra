@@ -1,34 +1,16 @@
 import Image from "next/image";
 import { Fragment } from "react";
 import { Heading } from "@/components/Headings";
-import Gallery  from "@/components/Gallery";
+import { Gallery } from "@/components/Gallery";
 import { Card } from "@/components/Card";
+import { Button } from "@/components/Button";
+import { CardLight } from "@/components/CardLight";
 
+// Gallery Images
 const galleryImages = [
-  <Image
-    src="/aerial.jpg"
-    alt="Hotel Playa Negra Aerial View"
-    width={400}
-    height={232}
-    className="object-cover"
-    key={1}
-    />,
-    <Image
-    src="/DSC_1095.jpg"
-    alt="Hotel Playa Negra Cabin"
-    width={400}
-    height={232}
-    className="object-cover"
-    key={2}
-    />,
-    <Image
-    src="/DSC_1159.jpg"
-    alt="Hotel Playa Negra Sunset"
-    width={400}
-    height={232}
-    className="object-cover"
-    key={3}
-    />
+  "/aerial.jpg",
+  "/DSC_1095.jpg",
+  "/DSC_1159.jpg",
 ];
 
 export default function Home() {
@@ -52,8 +34,8 @@ export default function Home() {
         <section className="mb-10">
           <Gallery galleryImages={ galleryImages } />
         </section>
-        <section id="accommodations" className="mb-10 relative">
-          <div className="absolute inset-0 fullscreen image-as-background w-screen min-h-[800px]">
+        <section id="accommodations" className=" pb-24 relative">
+          <div className="absolute inset-0 fullscreen image-as-background w-screen">
             <Image
               src="/background-beach.jpg"
               alt="Hotel Playa Negra Beach"
@@ -69,6 +51,81 @@ export default function Home() {
               <Card title="Bungalows" description="Queen size bed + two twin beds, ceiling fan, close to the beach" image="/bungallows-front.jpg" />
             </div>
           </div>
+        </section>
+        <section id="restaurant" className="mb-10 mt-10">
+          <div className="flex gap-x-10">
+            <div className="w-2/3 border border-[#ebeef1] p-10">
+              <div className="shadow-lg bg-white p-3 w-full h-[340px] hover:scale-105 transition-transform duration-500 ease-in-out">
+                <Image
+                  src="/resta-home.jpg"
+                  alt="Hotel Playa Negra Restaurant"
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-full"
+                  />
+                </div>
+            </div>
+            <div className="w-1/3 text-center">
+              <p className="mb-2 leading-none uppercase tracking-[0.5px]">Bar &</p>
+              <Heading level={2} extraClasses="text-[46px] leading-none borderline after:mt-10 after:border-[#2574a9]">Restaurant</Heading>
+              <p className="-mt-4 mb-8">Our restaurant and bar are located right on the beach, under a large circular palm leaf roof, traditionally called rancho in Costa Rica.</p>
+              <Button title="Discover More" />
+            </div>
+          </div>
+          <div className="flex mt-10">
+            <div className="flex-1">
+              <Image
+                src="/restaurant-2.jpg"
+                alt="Hotel Playa Negra Restaurant"
+                width={400}
+                height={300}
+                className="object-cover w-full h-full"
+                />
+            </div>
+            <div className="bg-[#2574a9] text-white flex-1 p-10 text-center">
+              <p className="italic leading-[1.67] text-lg">Savor our tropical fruit smoothies and cocktails, as well as a wide selection of dishes prepared with fresh local products and served in a casual and relaxed ambiance, while enjoying the view of the waves…</p>
+              <p className=" text-[#cbaa5c] tracking-[4px]">HOTEL PLAYA NEGRA</p>
+            </div>
+            <div className="flex-1">
+              <Image
+                src="/resta-light.jpg"
+                alt="Hotel Playa Negra Restaurant"
+                width={400}
+                height={300}
+                className="object-cover w-full h-full"
+                />
+            </div>
+          </div>
+        </section>
+        <section id="activities" className=" mb-20">
+          <Heading level={2} extraClasses="text-[46px] text-center borderline after:mt-10 after:border-[#2574a9]">Activities & Tours</Heading>
+          <div className="flex mt-10 gap-x-10 mt-12 mb-5">
+              <CardLight 
+                title="Surf" 
+                description="Located directly in front of the hotel is the world famous Playa Negra surf break and a few steps to the south lies a beautiful sandy beach, a perfect spot for beginners to learn to surf." 
+                image="/surfing-nueva.jpg"
+                width={800}
+                height={516}
+                alt="Hotel Playa Negra Surf" 
+              />
+              <CardLight 
+                title="Yoga" 
+                description="Yoga sessions take place at our oceanfront Shala, where the sound of waves and the sea breeze provide the perfect ambiance for your yoga experience." 
+                image="/yoga-nueva.jpg"
+                width={800}
+                height={516}
+                alt="Hotel Playa Negra Yoga"
+              />
+              <CardLight 
+                title="Horseback Riding" 
+                description="Enjoy beautiful horseback rides on the beach or along country trails with our well trained local horses and our guide, Elvis." 
+                image="/horseback-1.jpg"
+                width={800}
+                height={516}
+                alt="Hotel Playa Negra Horseback Riding"
+              />
+          </div>
+          <Button title="View All Activities" />
         </section>
       </Fragment>
   );

@@ -3,14 +3,14 @@ import { Button } from './Button';
 
 export function Card({ title, description, image, link }) {
     return (
-        <div className="relative w-full">
-            <div className="absolute z-10 h-[597px] w-full">
+        <div className="relative w-full pb-10">
+            <div className="absolute z-10 h-full w-full">
                 <Image
                     src={image}
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
+                    width={400}
+                    height={400}
                     alt="Hotel Playa Negra Accommodations"
+                    className='object-cover w-full h-full'
                 />
             </div>
             <div className="bg-white p-9 z-20 relative mt-[260px] mx-10">
