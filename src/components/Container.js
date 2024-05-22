@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function Container({ children }) {
     return (
@@ -18,6 +19,7 @@ export default function Container({ children }) {
                 <div className="max-w-[1170px] mx-auto">
                     {children}
                 </div>
+                <Footer />
             </main>
         </div>
     );

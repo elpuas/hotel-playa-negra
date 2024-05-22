@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { Button } from './Button';
+import Button from './Button';
 
-export function Card({ title, description, image, link }) {
+export default function Card({ title, description, image, link }) {
     return (
         <div className="relative w-full pb-10">
             <div className="absolute z-10 h-full w-full">

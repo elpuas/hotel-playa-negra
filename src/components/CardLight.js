@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export function CardLight( { title, description, image, alt, classes } ) {
+export default function CardLight( { title, description, image, alt, classes } ) {
     return (
         <div className={`flex-1 ${classes || ''}`}>
             <div className="h-[224px] hover:scale-105 transition-transform duration-500 ease-in-out mb-5">

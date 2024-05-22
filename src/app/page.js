@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { Fragment } from "react";
-import { Heading } from "@/components/Headings";
-import { Gallery } from "@/components/Gallery";
-import { Card } from "@/components/Card";
-import { Button } from "@/components/Button";
-import { CardLight } from "@/components/CardLight";
+import Heading from "@/components/Headings";
+import Gallery from "@/components/Gallery";
+import Card from "@/components/Card";
+import Button from "@/components/Button";
+import CardLight from "@/components/CardLight";
 
 // Gallery Images
 const galleryImages = [
@@ -15,7 +14,7 @@ const galleryImages = [
 
 export default function Home() {
   return (
-    <Fragment>
+    <>
         <section id="home" className="mb-10 flex gap-x-10">
           <div className="w-1/2">
             <Heading level={1} extraClasses="text-5xl">Welcome to <br/>Hotel Playa Negra</Heading>
@@ -127,6 +126,6 @@ export default function Home() {
           </div>
           <Button title="View All Activities" />
         </section>
-      </Fragment>
+      </>
   );
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Gallery( { galleryImages = [] } ) {
+export default function Gallery( { galleryImages = [] } ) {
     return (
         <div className="flex flex-wrap my-4">
             { Array.isArray(galleryImages) && galleryImages.map((image, index) => (
