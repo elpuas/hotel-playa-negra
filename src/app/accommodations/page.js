@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import Image from 'next/image';
 import Button from '@/components/Button';
+import PhotoFrame from '@/components/PhotoFrame';
 
 export default function Accommodations() {
     return (
@@ -16,7 +17,7 @@ export default function Accommodations() {
                 breadcrumb="Accommodations" 
             />
         </section>
-        <section id="suite-bungalows" className="mb-10">
+        <section id="suite-bungalows max-w-[1170px] mx-auto" className="mb-10">
             <div className="flex gap-x-10 pb-[70px]">
                 <div className="w-1/3">
                     <p className="mb-1 tracking-[4px] text-[13px] uppercase">Accommodations</p>
@@ -39,7 +40,33 @@ export default function Accommodations() {
                     </ul>
                     <Button title="Rates" link="/rates" />
                 </div>
-                <div className="w-2/3"></div>
+                <div className="w-2/3 relative p-10">
+                    <div className="absolute right-0 left-0 top-0 bottom-0">
+                        <Image
+                            src="/img-bckground.jpg"
+                            alt="background suite bungalows"
+                            width={1512}
+                            height={489}
+                            className="object-cover w-full h-full z-0 object-right-top"
+                        />
+                    </div>
+                    <div className="flex flex-col gap-6 h-full justify-between">
+                        <PhotoFrame 
+                            src="/suite-internal-one.jpg" 
+                            alt="Suite Bungalows Front Photo" 
+                            width={800} 
+                            height={516} 
+                            extraClasses="min-h-[416px]"
+                        />
+                        <PhotoFrame 
+                            src="/suite-internal-two.jpg" 
+                            alt="Suite Bungalows Front Photo" 
+                            width={800} 
+                            height={516}
+                            extraClasses="min-h-[416px]"
+                        />
+                    </div>
+                </div>
             </div>
             <div className="flex gap-x-10">
                 <div className="w-1/3">
@@ -61,7 +88,33 @@ export default function Accommodations() {
                     </ul>
                     <Button title="Rates" link="/rates" />
                 </div>
-                <div className="w-2/3"></div>
+                <div className="w-2/3 relative p-10">
+                    <div className="absolute right-0 left-0 top-0 bottom-0">
+                        <Image
+                            src="/img-bckground-2.jpg"
+                            alt="background suite bungalows"
+                            width={1512}
+                            height={489}
+                            className="object-cover w-full h-full z-0 object-right-top"
+                        />
+                    </div>
+                    <div className="flex flex-col gap-6 h-full justify-between">
+                        <PhotoFrame 
+                            src="/bungallow-internal-one-1.jpg" 
+                            alt="Suite Bungalows Front Photo" 
+                            width={800} 
+                            height={516} 
+                            extraClasses="min-h-[416px]"
+                        />
+                        <PhotoFrame 
+                            src="/bungallow-internal-two.jpg" 
+                            alt="Suite Bungalows Front Photo" 
+                            width={800} 
+                            height={516}
+                            extraClasses="min-h-[416px]"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
         </>
