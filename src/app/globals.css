@@ -30,3 +30,17 @@ body {
 p {
   @apply leading-8 text-base mb-5;
 }
+
+.fullscreen {
+  max-width: calc(100vw - 305px);
+}
+
+.image-as-background {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.borderline {
+  @apply after:mb-9 after:h-[1px] after:w-[50px] after:block after:border-t after:mt-4 after:mx-auto;
+}
