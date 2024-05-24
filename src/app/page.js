@@ -31,7 +31,7 @@ export default function Home() {
             />
         </section>
         <section className="mb-10">
-          <Gallery galleryImages={ galleryImages } />
+          <Gallery images={ galleryImages } />
         </section>
         <section id="accommodations" className=" pb-24 relative">
           <div className="absolute inset-0 fullscreen image-as-background w-screen">
