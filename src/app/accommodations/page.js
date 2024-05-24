@@ -5,6 +5,22 @@ import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import PhotoFrame from '@/components/PhotoFrame';
+import Gallery from '@/components/Gallery';
+
+const images = [
+    '/suite-internal-five.jpg',
+    '/13.jpg',
+    '/12.jpg',
+    '/suite-internal-three.jpg',
+    '/suite-internal-six.jpg',
+    '/10.jpg',
+    '/11.jpg',
+    '/suite-internal-two-1.jpg',
+    '/7.jpg',
+    '/14.jpg',
+    '/gallery-bungallow-one.jpg',
+    '/8.jpg'
+];  
 
 export default function Accommodations() {
     return (
@@ -17,9 +33,9 @@ export default function Accommodations() {
                 breadcrumb="Accommodations" 
             />
         </section>
-        <section id="suite-bungalows max-w-[1170px] mx-auto" className="mb-10">
+        <section id="accommodations" className="mb-10 max-w-[1170px] mx-auto">
             <div className="flex gap-x-10 pb-[70px]">
-                <div className="w-1/3">
+                <div id="suite" className="w-1/3">
                     <p className="mb-1 tracking-[4px] text-[13px] uppercase">Accommodations</p>
                     <Heading 
                         level={2} 
@@ -40,7 +56,7 @@ export default function Accommodations() {
                     </ul>
                     <Button title="Rates" link="/rates" />
                 </div>
-                <div className="w-2/3 relative p-10">
+                <div id="bungalows" className="w-2/3 relative p-10">
                     <div className="absolute right-0 left-0 top-0 bottom-0">
                         <Image
                             src="/img-bckground.jpg"
@@ -115,6 +131,22 @@ export default function Accommodations() {
                         />
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="gallery" className=" pb-24 relative">
+            <div className="absolute inset-0 fullscreen image-as-background w-screen">
+            <Image
+                src="/background-beach.jpg"
+                alt="Hotel Playa Negra Beach"
+                width={781}
+                height={469}
+                className="object-cover w-full -mx-8 h-full z-0"
+                />
+            </div>
+            <div className="relative z-10 pt-12">
+                <p className="text-center uppercase tracking-[4px] text-white mb-0">Hotel Playa Negra</p>
+                <Heading level={2} extraClasses="text-[46px] text-white text-center borderline after:mt-10 after:border-[#cbaa5c]">Room Gallery</Heading>
+                <Gallery images={images} className="grid grid-cols-4 gap-8" imageClassName="" />
             </div>
         </section>
         </>

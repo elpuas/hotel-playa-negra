@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
 
-export default function Gallery({ images = [] }) {
+export default function Gallery({ images = [], className, imageClassName}) {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -26,9 +26,9 @@ export default function Gallery({ images = [] }) {
   };
 
   return (
-    <div className="flex gap-x-6">
+    <div className={className}>
       {Array.isArray(images) && images.map((src, index) => (
-        <a key={index} onClick={() => openLightbox(index)} className="flex-1">
+        <a key={index} onClick={() => openLightbox(index)} className={imageClassName}>
           <Image
             src={src}
             alt={`Image ${index + 1}`}

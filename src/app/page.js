@@ -31,7 +31,7 @@ export default function Home() {
             />
         </section>
         <section className="mb-10">
-          <Gallery images={ galleryImages } />
+          <Gallery images={ galleryImages } className="flex gap-x-10" imageClassName="flex-1" />
         </section>
         <section id="accommodations" className=" pb-24 relative">
           <div className="absolute inset-0 fullscreen image-as-background w-screen">
@@ -46,8 +46,8 @@ export default function Home() {
           <div className="relative z-10 pt-12">
             <Heading level={2} extraClasses="text-[46px] text-white text-center mt-6 uppercase">Accommodations</Heading>
             <div className="flex flex-row gap-x-10 mt-16">
-              <Card title="Suite Bungalows" description="King size bed, A/C, private bathroom, and wooden deck" image="/suite-bungallows-front-1.jpg" />
-              <Card title="Bungalows" description="Queen size bed + two twin beds, ceiling fan, close to the beach" image="/bungallows-front.jpg" />
+              <Card title="Suite Bungalows" description="King size bed, A/C, private bathroom, and wooden deck" image="/suite-bungallows-front-1.jpg" link="/accommodations" />
+              <Card title="Bungalows" description="Queen size bed + two twin beds, ceiling fan, close to the beach" image="/bungallows-front.jpg" link="/accommodations#bungalows" />
             </div>
           </div>
         </section>
