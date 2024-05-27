@@ -1,0 +1,67 @@
+{
+    "seasons": [
+        {
+        "name": "Low Season",
+        "dates": [
+            "November 01, 2024 – Dec 21, 2024,  May 01, 2025 – Sept 15, 2025"
+        ],
+        "rooms": [
+            {
+            "type": "Bungalow",
+            "prices": [110, 120, 130, 140]
+            },
+            {
+            "type": "Suite Bungalow*",
+            "prices": [145, 165, 180, 195]
+            },
+            {
+            "type": "Suite Bungalow with shared Kitchen",
+            "prices": [165, 185, 200, 215]
+            }
+        ],
+        "color": "#27AE60"
+        },
+        {
+        "name": "High Season",
+        "dates": [
+            "Dec 22, 2024 – April 30, 2025"
+        ],
+        "rooms": [
+            {
+            "type": "Bungalow",
+            "prices": [130, 150, 170, 190]
+            },
+            {
+            "type": "Suite Bungalow*",
+            "prices": [165, 185, 205, 225]
+            },
+            {
+            "type": "Suite Bungalow with shared Kitchen",
+            "prices": [185, 205, 225, 245]
+            }
+        ],
+        "color": "#FF8008"
+        },
+        {
+        "name": "Peak Season",
+        "dates": [
+            "Dec 22, 2024 – Jan 02, 2025"
+        ],
+        "rooms": [
+            {
+            "type": "Bungalow",
+            "prices": [150, 170, 190, 210]
+            },
+            {
+            "type": "Suite Bungalow*",
+            "prices": [185, 205, 225, 245]
+            },
+            {
+            "type": "Suite Bungalow with shared Kitchen",
+            "prices": [205, 225, 245, 265]
+            }
+        ],
+        "color": "#005C97"
+        }
+    ]
+}

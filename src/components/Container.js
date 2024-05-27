@@ -11,7 +11,7 @@ export default function Container({ children }) {
                     src="/logo-color.gif"
                     alt="Playa Negra Logo"
                     width={185}
-                    height={145}
+                    height={146}
                 />
                 <Navbar />
             </aside>
