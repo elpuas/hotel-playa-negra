@@ -5,7 +5,16 @@ import Image from 'next/image';
 import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
 
-export default function Gallery({ images = [], className, imageClassName}) {
+/**
+ * Renders a gallery component with lightbox functionality.
+ *
+ * @param {Object} props - The component props.
+ * @param {Array} props.images - An array of image URLs.
+ * @param {string} props.className - The CSS class name for the gallery container.
+ * @param {string} props.imageClassName - The CSS class name for the gallery images.
+ * @returns {JSX.Element} The gallery component.
+ */
+export default function Gallery({ images = [], className, imageClassName }) {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -20,6 +29,11 @@ export default function Gallery({ images = [], className, imageClassName}) {
     }
   }, [isOpen, photoIndex, images]);
 
+  /**
+   * Opens the lightbox with the specified image index.
+   *
+   * @param {number} index - The index of the image to open.
+   */
   const openLightbox = (index) => {
     setPhotoIndex(index);
     setIsOpen(true);

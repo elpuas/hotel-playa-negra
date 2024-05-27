@@ -28,6 +28,7 @@ export default function Home() {
             width={400}
             height={300}
             className="w-1/2 object-cover max-w-1/2 h-[520px]"
+            priority
             />
         </section>
         <section className="mb-10">
