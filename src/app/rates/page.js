@@ -3,6 +3,10 @@ import Heading from '@/components/Headings';
 import PageHero from '@/components/PageHero';
 import SeasonTableClientWrapper from '@/components/SeasonTableWrapper';
 
+/**
+ * Renders the rates page.
+ * @returns {JSX.Element} The rendered rates page.
+ */
 export default function Rates() {
     return (
         <>

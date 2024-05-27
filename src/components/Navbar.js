@@ -3,6 +3,10 @@ import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
+/**
+ * Renders the navigation bar component.
+ * @returns {JSX.Element} The rendered navigation bar.
+ */
 export default function Navbar() {
     return (
         <nav className="mt-14">

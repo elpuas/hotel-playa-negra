@@ -2,6 +2,12 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+/**
+ * Renders a container component with a sidebar, main content area, and footer.
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - The content to be rendered inside the container.
+ * @returns {JSX.Element} The rendered container component.
+ */
 export default function Container({ children }) {
     return (
         <div className="flex h-screen">

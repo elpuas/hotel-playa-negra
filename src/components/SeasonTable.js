@@ -2,6 +2,17 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Fragment} from 'react'
 
+/**
+ * Renders a table for a specific season.
+ *
+ * @param {Object} props - The component props.
+ * @param {Object} props.season - The season object containing the season details.
+ * @param {string} props.season.name - The name of the season.
+ * @param {string} props.season.color - The background color of the season.
+ * @param {Array} props.season.dates - The array of dates for the season.
+ * @param {Array} props.season.rooms - The array of rooms for the season.
+ * @returns {JSX.Element} The rendered SeasonTable component.
+ */
 export default function SeasonTable({season}) {
     return (
         <div className="border rounded-lg overflow-hidden shadow-lg m-4 flex-1">

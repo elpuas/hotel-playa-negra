@@ -1,6 +1,16 @@
 import Image from 'next/image';
 import Button from './Button';
 
+/**
+ * Renders a card component.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.title - The title of the card.
+ * @param {string} props.description - The description of the card.
+ * @param {string} props.image - The image source of the card.
+ * @param {string} props.link - The link associated with the card.
+ * @returns {JSX.Element} The rendered card component.
+ */
 export default function Card({ title, description, image, link }) {
     return (
         <div className="relative w-full pb-10">

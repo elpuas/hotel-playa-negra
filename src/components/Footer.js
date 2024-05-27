@@ -1,3 +1,4 @@
+
 export default function Footer() {
     return (
         <footer className="bg-[#2574a9] fullscreen -mx-8">

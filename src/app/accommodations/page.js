@@ -22,6 +22,10 @@ const images = [
     '/8.jpg'
 ];  
 
+/**
+ * Accommodations page.
+ * @returns {JSX.Element} The Accommodations page.
+ */
 export default function Accommodations() {
     return (
         <>

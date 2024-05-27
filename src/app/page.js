@@ -12,6 +12,10 @@ const galleryImages = [
   "/DSC_1159.jpg",
 ];
 
+/**
+ * Renders the home page.
+ * @returns {JSX.Element} The rendered home page.
+ */
 export default function Home() {
   return (
     <>
