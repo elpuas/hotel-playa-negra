@@ -1,5 +1,16 @@
 import Image from "next/image"
 
+/**
+ * Renders a photo frame component.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.src - The source URL of the image.
+ * @param {string} props.alt - The alternative text for the image.
+ * @param {number} props.width - The width of the image.
+ * @param {number} props.height - The height of the image.
+ * @param {string} [props.extraClasses] - Additional CSS classes for the photo frame.
+ * @returns {JSX.Element} The rendered photo frame component.
+ */
 export default function PhotoFrame({ src, alt, width, height, extraClasses = ''}) {
     return (
         <>

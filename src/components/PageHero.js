@@ -2,6 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Heading from '@/components/Headings';
 
+/**
+ * Renders a page hero component.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.src - The image source URL.
+ * @param {string} props.alt - The alternative text for the image.
+ * @param {string} props.title - The title of the page.
+ * @param {string} props.breadcrumb - The breadcrumb text.
+ * @returns {JSX.Element} The rendered page hero component.
+ */
 export default function PageHero({ src, alt, title, breadcrumb }) {
     return (
         <>
